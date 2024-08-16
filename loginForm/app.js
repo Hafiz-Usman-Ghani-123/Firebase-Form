@@ -2,6 +2,9 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getRedirectResult,
 } from "../firebase/app.js";
 //
 const email = document.querySelector("#email");
@@ -41,9 +44,9 @@ btn.addEventListener("click", () => {
       }).showToast();
     });
 });
-// 
+//
 // forget btn code ------------------------------------------------------------------------
-// 
+//
 forgetPass.addEventListener("click", () => {
   sendPasswordResetEmail(auth, email.value)
     .then(() => {
@@ -73,4 +76,32 @@ forgetPass.addEventListener("click", () => {
       }).showToast();
       // ..
     });
+});
+
+// By Google Authenticatoin  code ------------------------------------------------------------------------
+// 
+const provider = new GoogleAuthProvider();
+const withGoogle = document.querySelector(".withGoogle");
+withGoogle.addEventListener("click", () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+       window.location.href = '../MainFiles/index.html'
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      Toastify({
+        text: errorMessage,
+        position: "center", // `left`, `center`
+        className: "info",
+        style: {
+          background: "#fc3232", //red
+          //  background: "rgb(50, 204, 236)",
+        },
+      }).showToast();
+    });
+  // //  
 });

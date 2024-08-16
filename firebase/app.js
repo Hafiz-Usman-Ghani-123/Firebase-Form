@@ -7,6 +7,9 @@ import {
   signInWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getRedirectResult,
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 const firebaseConfig = {
@@ -30,4 +33,7 @@ export {
   signInWithEmailAndPassword,
   signOut,
   sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getRedirectResult,
 };
