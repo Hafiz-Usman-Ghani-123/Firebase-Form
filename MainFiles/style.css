@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: "Cantora One";
 }
+
+.info {
+  font-size: 22px;
+  border-radius: 10px;
+}

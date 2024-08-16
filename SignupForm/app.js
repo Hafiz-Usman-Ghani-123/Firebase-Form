@@ -10,14 +10,14 @@ sBtn.addEventListener("click", () => {
     .then((userCredential) => {
       // Signed up
       const user = userCredential.user;
-      // Toastify({
-      //   text: "Your Account Has Been Created !!",
-      //   position: "center", // `left`, `center`
-      //   className: "info",
-      //   style: {
-      //     background: "rgb(50, 204, 236)",
-      //   },
-      // }).showToast();
+      Toastify({
+        text: "Your Account Has Been Created !!",
+        position: "center", // `left`, `center`
+        className: "info",
+        style: {
+          background: "rgb(50, 204, 236)",
+        },
+      }).showToast();
       window.location.href = '../loginForm/index.html'
     })
     .catch((error) => {

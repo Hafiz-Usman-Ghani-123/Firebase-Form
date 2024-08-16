@@ -7,9 +7,10 @@ import {
 const email = document.querySelector("#email");
 const pass = document.querySelector("#password");
 const btn = document.querySelector(".loginBtn");
+const forgetPass = document.querySelector("#forgetPass");
+// console.log(forgetPass);
 
 const auth = getAuth();
-// console.log(email, pass, btn);
 btn.addEventListener("click", () => {
   signInWithEmailAndPassword(auth, email.value, pass.value)
     .then((userCredential) => {
@@ -38,5 +39,38 @@ btn.addEventListener("click", () => {
           background: "rgb(50, 204, 236)",
         },
       }).showToast();
+    });
+});
+// 
+// forget btn code ------------------------------------------------------------------------
+// 
+forgetPass.addEventListener("click", () => {
+  sendPasswordResetEmail(auth, email.value)
+    .then(() => {
+      // Password reset email sent!
+      Toastify({
+        text: "Password Reset Email Sent, Check Your Gmail !! ",
+        position: "center", // `left`, `center`
+        className: "info",
+        style: {
+          //   background: "#fc3232", //red
+          background: "rgb(50, 204, 236)",
+        },
+      }).showToast();
+      // ..
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      Toastify({
+        text: "Please Enter Valid Email !! ",
+        position: "center", // `left`, `center`
+        className: "info",
+        style: {
+          background: "#fc3232", //red
+          //  background: "rgb(50, 204, 236)",
+        },
+      }).showToast();
+      // ..
     });
 });

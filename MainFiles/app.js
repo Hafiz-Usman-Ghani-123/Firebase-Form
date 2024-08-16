@@ -1,18 +1,21 @@
-import { getAuth, signOut } from "../firebase/app.js";
+import { getAuth, signOut, onAuthStateChanged } from "../firebase/app.js";
+const auth = getAuth();
 
+//
+// logout
+//
 const logoutbtn = document.querySelector(".logout");
 logoutbtn.addEventListener("click", () => {
-  const auth = getAuth();
   signOut(auth)
     .then(() => {
-    //   Toastify({
-    //     text: "Sign-out successful !!",
-    //     position: "center", // `left`, `center`
-    //     className: "info",
-    //     style: {
-    //       background: "rgb(50, 204, 236)",
-    //     },
-    //   }).showToast();
+      //   Toastify({
+      //     text: "Sign-out successful !!",
+      //     position: "center", // `left`, `center`
+      //     className: "info",
+      //     style: {
+      //       background: "rgb(50, 204, 236)",
+      //     },
+      //   }).showToast();
       window.location.href = "../loginForm/index.html";
     })
     .catch((error) => {
@@ -25,4 +28,22 @@ logoutbtn.addEventListener("click", () => {
         },
       }).showToast();
     });
+});
+////
+//// onAuthStateChanged
+////
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    const useremail = user.email;
+    console.log("user Sign in hy");
+    // userEmail
+    const userEmailDiv = document.querySelector(".userEmail");
+    userEmailDiv.innerHTML = `Welcome To ${useremail}`;
+    // ...
+  } else {
+    // User is signed out
+    console.log("user Sign in nahi hy");
+    // ...
+  }
 });
