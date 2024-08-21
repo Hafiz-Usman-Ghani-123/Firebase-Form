@@ -18,7 +18,9 @@ sBtn.addEventListener("click", () => {
           background: "rgb(50, 204, 236)",
         },
       }).showToast();
-      window.location.href = '../loginForm/index.html'
+      setTimeout(() => {
+        window.location.href = "../loginForm/index.html";
+      }, 1000);
     })
     .catch((error) => {
       const errorCode = error.code;

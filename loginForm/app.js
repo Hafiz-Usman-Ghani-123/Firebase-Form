@@ -18,16 +18,17 @@ btn.addEventListener("click", () => {
   signInWithEmailAndPassword(auth, email.value, pass.value)
     .then((userCredential) => {
       const user = userCredential.user;
-      //   Toastify({
-      //     text: "Account Has Been Loged In 👍",
-      //     position: "center", // `left`, `center`
-      //     className: "info",
-      //     style: {
-      //       background: "rgb(50, 204, 236)",
-      //     },
-      //   }).showToast();
-      window.location.href = "../MainFiles/index.html";
-      // ...
+      Toastify({
+        text: "Account Has Been Loged In 👍",
+        position: "center", // `left`, `center`
+        className: "info",
+        style: {
+          background: "rgb(50, 204, 236)",
+        },
+      }).showToast();
+      setTimeout(() => {
+        window.location.href = "../index.html";
+      }, 1000);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -79,7 +80,7 @@ forgetPass.addEventListener("click", () => {
 });
 
 // By Google Authenticatoin  code ------------------------------------------------------------------------
-// 
+//
 const provider = new GoogleAuthProvider();
 const withGoogle = document.querySelector(".withGoogle");
 withGoogle.addEventListener("click", () => {
@@ -87,7 +88,7 @@ withGoogle.addEventListener("click", () => {
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
-       window.location.href = '../MainFiles/index.html'
+      window.location.href = "../loginForm/index.html";
     })
     .catch((error) => {
       // Handle Errors here.
@@ -103,5 +104,5 @@ withGoogle.addEventListener("click", () => {
         },
       }).showToast();
     });
-  // //  
+  // //
 });
