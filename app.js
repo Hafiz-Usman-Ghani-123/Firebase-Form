@@ -16,7 +16,7 @@ logoutbtn.addEventListener("click", () => {
       //       background: "rgb(50, 204, 236)",
       //     },
       //   }).showToast();
-      window.location.href = "../loginForm/index.html";
+      window.location.href = "../loginForm/login.html";
     })
     .catch((error) => {
       Toastify({
@@ -45,7 +45,7 @@ onAuthStateChanged(auth, (user) => {
   } else {
     // User is signed out
     console.log("user Sign in nahi hy");
-    window.location.href = "../loginForm/index.html";
+    window.location.href = "../loginForm/login.html";
     // ...
   }
 });

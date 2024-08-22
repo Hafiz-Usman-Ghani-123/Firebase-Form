@@ -19,7 +19,7 @@ sBtn.addEventListener("click", () => {
         },
       }).showToast();
       setTimeout(() => {
-        window.location.href = "../loginForm/index.html";
+        window.location.href = "../loginForm/login.html";
       }, 1000);
     })
     .catch((error) => {

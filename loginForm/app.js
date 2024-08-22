@@ -88,7 +88,7 @@ withGoogle.addEventListener("click", () => {
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
-      window.location.href = "../loginForm/index.html";
+      window.location.href = "../loginForm/login.html";
     })
     .catch((error) => {
       // Handle Errors here.
