@@ -79,30 +79,30 @@ forgetPass.addEventListener("click", () => {
     });
 });
 
-// By Google Authenticatoin  code ------------------------------------------------------------------------
-//
-const provider = new GoogleAuthProvider();
-const withGoogle = document.querySelector(".withGoogle");
-withGoogle.addEventListener("click", () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      window.location.href = "../loginForm/login.html";
-    })
-    .catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      Toastify({
-        text: errorMessage,
-        position: "center", // `left`, `center`
-        className: "info",
-        style: {
-          background: "#fc3232", //red
-          //  background: "rgb(50, 204, 236)",
-        },
-      }).showToast();
-    });
-  // //
-});
+// // By Google Authenticatoin  code ------------------------------------------------------------------------
+// //
+// const provider = new GoogleAuthProvider();
+// const withGoogle = document.querySelector(".withGoogle");
+// withGoogle.addEventListener("click", () => {
+//   signInWithPopup(auth, provider)
+//     .then((result) => {
+//       // This gives you a Google Access Token. You can use it to access the Google API.
+//       const credential = GoogleAuthProvider.credentialFromResult(result);
+//       window.location.href = "../loginForm/login.html";
+//     })
+//     .catch((error) => {
+//       // Handle Errors here.
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       Toastify({
+//         text: errorMessage,
+//         position: "center", // `left`, `center`
+//         className: "info",
+//         style: {
+//           background: "#fc3232", //red
+//           //  background: "rgb(50, 204, 236)",
+//         },
+//       }).showToast();
+//     });
+//   // //
+// });

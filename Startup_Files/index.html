@@ -27,7 +27,7 @@
 <body>
     <!-- ===============     navbar     =================== --><!-- ok  -->
     <nav class="navbar navbar-expand-sm  bg-light">
-        <div class="container-fluid justify-content-end ">
+        <div class="container-fluid justify-content-end border border-2 ">
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                     <li class="nav-item">
                         <!-- Button trigger modal -->
                         <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#modal-2"
-                            data-bs-whatever="@getbootstrap">Feedback</a>
+                            data-bs-whatever="@getbootstrap">Feedback </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact</a>
@@ -71,8 +71,15 @@
         </div>
         <div class="row mt-5">
             <div class="col d-flex justify-content-center gap-2 ">
-                <button class="btn btn-dark fs-5"> Go To Sign Up &#10148</button>
-                <button class="btn btn-dark fs-5"> Go To Sign In &#10148</button>
+                <button id="signupBtn" class="btn btn-dark fs-5"> Go To Sign Up &#10148</button>
+                <button id="signinBtn" class="btn btn-dark fs-5"> Go To Login &#10148</button>
+            </div>
+        </div>
+        <div class="row mt-2 ">
+            <div class="col d-flex justify-content-center ">
+                <button id="withGoogle" class="btn btn-dark fs-5 ">Continue With Google <img
+                        src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png"
+                        width="20px"></img> </button>
             </div>
         </div>
     </div>
@@ -110,18 +117,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Email :</label>
-                            <input type="email" class="form-control" id="recipient-name">
+                            <!-- <label for="recipient-name" class="col-form-label">Email :</label> -->
+                            <input type="email" class="form-control" id="recipient-name"
+                                placeholder="Enter Your Valid Email">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Your Feedback :</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <!-- <label for="message-text" class="col-form-label">Your Feedback :</label> -->
+                            <textarea class="form-control" id="message-text"
+                                placeholder="Enter Your Feedback"></textarea>
                         </div>
                     </form>
                 </div>

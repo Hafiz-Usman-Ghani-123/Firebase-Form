@@ -7,16 +7,8 @@ const auth = getAuth();
 const logoutbtn = document.querySelector(".logout");
 logoutbtn.addEventListener("click", () => {
   signOut(auth)
-    .then(() => {
-      //   Toastify({
-      //     text: "Sign-out successful !!",
-      //     position: "center", // `left`, `center`
-      //     className: "info",
-      //     style: {
-      //       background: "rgb(50, 204, 236)",
-      //     },
-      //   }).showToast();
-      window.location.href = "../loginForm/login.html";
+    .then(() => { 
+      window.location.href = "../Startup_Files/index.html";
     })
     .catch((error) => {
       Toastify({
