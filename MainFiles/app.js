@@ -8,7 +8,7 @@ const logoutbtn = document.querySelector(".logout");
 logoutbtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => { 
-      window.location.href = "../Startup_Files/index.html";
+      window.location.href = "../index.html";
     })
     .catch((error) => {
       Toastify({
@@ -37,7 +37,7 @@ onAuthStateChanged(auth, (user) => {
   } else {
     // User is signed out
     console.log("user Sign in nahi hy");
-    window.location.href = "../loginForm/login.html";
+    window.location.href = "../index.html";
     // ...
   }
 });

@@ -5,14 +5,14 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   getRedirectResult,
-} from "../firebase/app.js";
+} from "./firebase/app.js";
 //redirect to sign in page onclick
 document.querySelector("#signinBtn").addEventListener('click',()=>{
-    location.href = '../loginForm/login.html'
+    location.href = './loginForm/login.html'
 })
 //redirect to sign up page onclick
 document.querySelector("#signupBtn").addEventListener('click', ()=>{
-    location.href = "../SignupForm/signup.html";
+    location.href = "./SignupForm/signup.html";
 
 });
 

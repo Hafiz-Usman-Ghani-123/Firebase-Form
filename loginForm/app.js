@@ -27,7 +27,7 @@ btn.addEventListener("click", () => {
         },
       }).showToast();
       setTimeout(() => {
-        window.location.href = "../index.html";
+        window.location.href = "../MainFiles/index.html";
       }, 1000);
     })
     .catch((error) => {
