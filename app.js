@@ -1,10 +1,7 @@
 import {
   getAuth,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
   GoogleAuthProvider,
   signInWithPopup,
-  getRedirectResult,
 } from "./firebase/app.js";
 //redirect to sign in page onclick
 document.querySelector("#signinBtn").addEventListener('click',()=>{
@@ -28,7 +25,6 @@ document.getElementById("withGoogle").addEventListener("click", () => {
         window.location.href = "../MainFiles/index.html";
       })
       .catch((error) => {
-        // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
         Toastify({
