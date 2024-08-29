@@ -3,7 +3,10 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Cantora one";
-}  
-.modal-body>*{
-    text-align: center;
 }
+.modal-body > * {
+  text-align: center;
+}
+.nav-link:hover {
+  color: white;
+} 

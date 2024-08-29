@@ -24,9 +24,9 @@
 
 </head>
 
-<body>
+<body class="bg-light">
     <!-- ===============     navbar     =================== --><!-- ok  -->
-    <nav class="navbar navbar-expand-sm  bg-light">
+    <nav class="navbar navbar-expand-sm  navbar-dark bg-info ">
         <div class="container-fluid justify-content-end border border-2 ">
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -36,30 +36,31 @@
             <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
                 <ul class="navbar-nav fs-4 align-items-center ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Start Up</a>
+                        <a class="nav-link active" aria-current="page" href="#">Get Start</a>
                     </li>
                     <li class="nav-item">
                         <!-- Button trigger modal -->
-                        <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">About
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">About
                             Us</a>
                     </li>
                     <li class="nav-item">
                         <!-- Button trigger modal -->
-                        <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#modal-2"
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-2"
                             data-bs-whatever="@getbootstrap">Feedback </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                        <a class="nav-link " class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modal-3">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- ===================        after navbar        =============== -->
+    <!-- ===================        Main Headings & Btns        =============== -->
 
-    <div class="container text-black">
+    <div class="container ">
         <div class="row">
-            <div class="col d-flex flex-column align-items-center mt-5 text-primary">
+            <div class="col d-flex flex-column align-items-center mt-5 text-info">
                 <h1>Welcome to Flip Cart !! </h1> <br>
                 <p class="text-black text-center fs-5">At Flip Cart, we believe in bringing the best products right to
                     your doorstep. <br> Whether you are looking for the latest
@@ -85,19 +86,20 @@
     </div>
     <!-- ==================    modal box for about =================  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="exampleModalLabel">About Flip Cart</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <h4 class="text-info"> Greatings</h4>
                     <p>
                         Welcome to Flip Cart, your one-stop online shopping destination! We are committed to delivering
                         an exceptional shopping
                         experience by offering a wide variety of products at unbeatable prices.
                     </p>
-                    <h4> Our Journey</h4>
+                    <h4 class="text-info"> Our Journey</h4>
                     <p> Flip Cart was founded with a simple yet powerful vision: to revolutionize the way people shop
                         online. We started with a
                         small selection of products and a big dream—to become a trusted name in e-commerce. Today, we
@@ -105,9 +107,40 @@
                         into a comprehensive platform that caters to the diverse needs of our customers across the
                         country.
                     </p>
+                    <h4 class="text-info">Why Shop with Us ?</h4>
+                    <p>Quality Products: We carefully curate our inventory to ensure that you only receive the best
+                        products. We partner with
+                        trusted brands and suppliers to bring you high-quality items that you can rely on.
+                        Customer Satisfaction: Your satisfaction is our top priority. We are committed to providing
+                        excellent customer service,
+                        from the moment you browse our site to when your order arrives at your doorstep. Our dedicated
+                        support team is always
+                        here to help with any questions or concerns.
+                        Secure Shopping: Your privacy and security are of utmost importance to us. We use the latest
+                        technology to ensure that
+                        your personal information is safe, and we offer secure payment options for your peace of mind.
+                        Fast Delivery: We know how important it is to receive your orders quickly. That's why we offer
+                        fast and reliable
+                        delivery services, ensuring that your purchases reach you as soon as possible.</p>
+                    <h4 class="text-info">Our Vision</h4>
+                    <p>At Flip Cart, our vision is to become the go-to online shopping platform for people everywhere.
+                        We strive to
+                        continuously expand our product offerings, improve our services, and innovate in ways that
+                        enhance your shopping
+                        experience. We are not just a marketplace; we are a community of shoppers who value quality,
+                        convenience, and trust.
+                    </p>
+                    <h4 class="text-info">Join Us</h4>
+                    <p> We invite you to explore our website and discover a world of possibilities. Whether you're
+                        looking for the latest
+                        gadgets, trendy fashion, or everyday essentials, Flip Cart is here to meet your needs. Join our
+                        growing family of
+                        satisfied customers and experience the joy of shopping with Flip Cart.</p>
+
+                    <h6 class="text-info"> Thank you for choosing Flip Cart. Happy shopping ! </h6>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark " data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -117,26 +150,44 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Feedback</h5>
+                    <h3 class="modal-title" id="exampleModalLabel">Feedback</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <!-- <label for="recipient-name" class="col-form-label">Email :</label> -->
-                            <input type="email" class="form-control" id="recipient-name"
+                            <input type="email" class="form-control " id="recipient-name"
                                 placeholder="Enter Your Valid Email">
                         </div>
                         <div class="mb-3">
-                            <!-- <label for="message-text" class="col-form-label">Your Feedback :</label> -->
                             <textarea class="form-control" id="message-text"
                                 placeholder="Enter Your Feedback"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info text-white">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============   Modal for contact  =================== -->
+    <div class="modal fade" id="modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Contact Us </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>How Would You Like To Contact Us ? </h5>
+                    <p class="pt-3">Email : <a href="mailto:usmanghani22322@gmail.com"
+                            class="text-info">usmanghani22322@gmail.com</a></p>
+                    <p class=" m-0 p-0">Phone : <a href="tel:+923102126643" class="text-info">My Phone Number</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
